@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<body>
+</body>
+
+<script>
+  'use strict';
+  const image = new Image();
+  image.src = 'https://i.ibb.co/PcKRxV7/ask.png';
+  image.onload = () => {
+    const canvas = document.createElement('canvas');
+    document.body.append(canvas);
+    canvas.width = image.width;
+    canvas.height = image.height;
+    const context = canvas.getContext('2d');
+    context.drawImage(image, 0, 0);
+    context.font = 'bold 200px Times New Roman';
+    context.textAlign = 'center';
+    context.fillStyle = 'red';
+    context.fillText('P', image.width / 2, image.height / 2);
+  }
+</script>
+
+</html>
